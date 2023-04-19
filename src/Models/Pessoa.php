@@ -9,7 +9,7 @@ class Pessoa extends Model
     protected $table = 'pessoas';
 
     protected $fillable = [
-        'nome', 'cpf', 'cep', 'logradouro', 'bairro', 'telefone', 'numero', 'complemento', 'usuario_id'
+        'nome', 'cpf', 'cep', 'logradouro', 'bairro', 'cidade', 'uf', 'telefone', 'numero', 'complemento', 'usuario_id'
     ];
 
     public function usuario()

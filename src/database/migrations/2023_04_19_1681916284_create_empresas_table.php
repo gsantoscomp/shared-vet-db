@@ -15,6 +15,8 @@ class CreateEmpresasTable extends Migration
             $table->string('nome_fantasia',255)->nullable();
             $table->string('logradouro',255);
             $table->string('bairro',100);
+            $table->string('cidade',100);
+            $table->string('uf',2);
             $table->string('cep',8);
             $table->string('telefone',11);
             $table->string('numero',10)->nullable();

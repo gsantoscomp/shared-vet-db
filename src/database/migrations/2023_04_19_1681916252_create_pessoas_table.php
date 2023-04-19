@@ -15,6 +15,8 @@ class CreatePessoasTable extends Migration
             $table->string('cep',8);
             $table->string('logradouro',255);
             $table->string('bairro',100);
+            $table->string('cidade',100);
+            $table->string('uf',2);
             $table->string('telefone', 11);
             $table->string('numero',10)->nullable();
             $table->string('complemento',255)->nullable();
