@@ -9,7 +9,8 @@ class Empresa extends Model
     protected $table = 'pessoas';
 
     protected $fillable = [
-        'nome', 'cnpj', 'cep', 'logradouro', 'bairro', 'telefone', 'numero', 'complemento', 'usuario_id'
+        'cnpj', 'razao_social', 'nome_fantasia', 'cep', 'logradouro', 'bairro', 'telefone', 'numero', 'complemento',
+        'usuario_id'
     ];
 
     public function usuario()
