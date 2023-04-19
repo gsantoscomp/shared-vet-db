@@ -1,0 +1,15 @@
+{
+    "name": "gsantoscomp/vet-db",
+    "description": "Shared migrations, seeders and models of horsys' modules",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gsantoscomp\\VetDb\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/support": ">=5.5"
+    }
+}
