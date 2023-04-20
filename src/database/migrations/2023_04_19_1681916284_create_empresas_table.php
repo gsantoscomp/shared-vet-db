@@ -23,8 +23,6 @@ class CreateEmpresasTable extends Migration
             $table->string('complemento',255)->nullable();
             $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
-
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
         });
     }
 

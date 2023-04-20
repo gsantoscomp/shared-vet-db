@@ -4,7 +4,7 @@ Adicione as seguintes linhas no arquivo **composer.json**
 
 ```
 "require": {
-    "gsantoscomp/vet-db": "master"
+    "gsantoscomp/vet-db": "dev-master"
 },
 "repositories": [
     {
