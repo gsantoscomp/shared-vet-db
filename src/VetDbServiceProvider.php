@@ -4,7 +4,7 @@ namespace  Gsantoscomp\VetDb;
 
 use Illuminate\Support\ServiceProvider;
 
-class VetDatabaseServiceProvider extends ServiceProvider
+class VetDbServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
