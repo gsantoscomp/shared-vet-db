@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsantoscomp\VetDb\Models;
+namespace Gsantoscomp\SharedVetDb\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

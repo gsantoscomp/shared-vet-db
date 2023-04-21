@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsantoscomp\VetDb\Factories;
+namespace Gsantoscomp\SharedVetDb\Factories;
 
 use Faker\Factory;
 use Gsantoscomp\VetDb\Models\Usuario;

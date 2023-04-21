@@ -1,6 +1,6 @@
 <?php
 
-namespace  Gsantoscomp\VetDb;
+namespace  Gsantoscomp\SharedVetDb;
 
 use Illuminate\Support\ServiceProvider;
 

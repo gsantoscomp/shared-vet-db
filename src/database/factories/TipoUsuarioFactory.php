@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsantoscomp\VetDb\Factories;
+namespace Gsantoscomp\SharedVetDb\Factories;
 
 use Gsantoscomp\VetDb\Models\TipoUsuario;
 
