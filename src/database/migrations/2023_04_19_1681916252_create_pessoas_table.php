@@ -20,7 +20,6 @@ class CreatePessoasTable extends Migration
             $table->string('telefone', 11);
             $table->string('numero',10)->nullable();
             $table->string('complemento',255)->nullable();
-            $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
         });
     }

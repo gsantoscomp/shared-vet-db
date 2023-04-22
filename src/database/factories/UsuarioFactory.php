@@ -3,10 +3,11 @@
 namespace Gsantoscomp\SharedVetDb\Factories;
 
 use Faker\Factory;
-use Gsantoscomp\VetDb\Models\Usuario;
-use Illuminate\Database\Eloquent\Model;
-use Gsantoscomp\VetDb\Models\Empresa;
-use Gsantoscomp\VetDb\Models\Pessoa;
+use Gsantoscomp\SharedVetDb\Models\TipoUsuario;
+use Gsantoscomp\SharedVetDb\Models\Usuario;
+use Gsantoscomp\SharedVetDb\Models\Empresa;
+use Gsantoscomp\SharedVetDb\Models\Pessoa;
+use Illuminate\Support\Facades\Hash;
 
 class UsuarioFactory
 {
@@ -19,11 +20,15 @@ class UsuarioFactory
 
         $entidade = $entidadeControlador ? (new EmpresaFactory())->create() : (new PessoaFactory())->create();
 
-        $tipoUsuario = (new TipoUsuarioFactory())->create()->first();
+        if (TipoUsuario::first() == null) {
+            (new TipoUsuarioFactory())->create();
+        }
+
+        $tipoUsuario = TipoUsuario::first();
 
         $attributes = array_merge([
             'email' => $faker->email,
-            'password' => $faker->password,
+            'senha' => Hash::make('123456'),
             'entidade_id' => $entidade->id,
             'entidade_tipo' => $entidadeClass,
             'tipo_usuario_id' => $tipoUsuario->id,

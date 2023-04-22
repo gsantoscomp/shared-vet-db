@@ -3,7 +3,7 @@
 namespace Gsantoscomp\SharedVetDb\Factories;
 
 use Faker\Factory;
-use Gsantoscomp\VetDb\Models\Pessoa;
+use Gsantoscomp\SharedVetDb\Models\Pessoa;
 
 class PessoaFactory
 {
@@ -13,17 +13,18 @@ class PessoaFactory
 
         $attributes =  array_merge([
             'nome' => $faker->name,
-            'cpf' => $faker->cpf,
-            'cep' => $faker->cep,
+            'cpf' => $faker->numerify('###########'),
+            'cep' => $faker->numerify('########'),
             'logradouro' => $faker->streetName,
             'bairro' => $faker->cityPrefix,
             'cidade' => $faker->city,
             'uf' => $faker->stateAbbr,
-            'telefone' => $faker->phoneNumber,
+            'telefone' => $faker->numerify('###########'),
             'numero' => $faker->buildingNumber,
             'complemento' => $faker->secondaryAddress,
         ], $attributes);
 
+//        dd($attributes);
         return Pessoa::create($attributes);
     }
 }

@@ -10,8 +10,8 @@ class CreateTiposUsuarioTable extends Migration
     {
         Schema::create('tipos_usuario', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo_usuario',100);
-            $table->text('detalhes')->nullable();
+            $table->string('nome',100);
+            $table->text('descricao')->nullable();
             $table->timestamps();
         });
     }

@@ -9,11 +9,11 @@ class TipoUsuario extends Model
     protected $table = 'tipos_usuario';
 
     protected $fillable = [
-        'tipo_usuario', 'detalhes'
+        'nome', 'descricao'
     ];
 
     public function usuarios()
     {
-        return $this->hasMany('Gsantoscomp\VetDb\Models\Usuario', 'tipo_usuario_id', 'id');
+        return $this->hasMany('Gsantoscomp\SharedVetDb\Models\Usuario', 'tipo_usuario_id', 'id');
     }
 }

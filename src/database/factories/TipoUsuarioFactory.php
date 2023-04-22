@@ -2,13 +2,13 @@
 
 namespace Gsantoscomp\SharedVetDb\Factories;
 
-use Gsantoscomp\VetDb\Models\TipoUsuario;
+use Gsantoscomp\SharedVetDb\Models\TipoUsuario;
 
 class TipoUsuarioFactory
 {
     public function create()
     {
-        return TipoUsuario::createMany([
+        return TipoUsuario::insert([
             [
                 'nome' => 'admin',
                 'descricao' => 'Usuário administrador do sistema',

@@ -9,11 +9,11 @@ class Pessoa extends Model
     protected $table = 'pessoas';
 
     protected $fillable = [
-        'nome', 'cpf', 'cep', 'logradouro', 'bairro', 'cidade', 'uf', 'telefone', 'numero', 'complemento', 'usuario_id'
+        'nome', 'cpf', 'cep', 'logradouro', 'bairro', 'cidade', 'uf', 'telefone', 'numero', 'complemento'
     ];
 
     public function usuario()
     {
-        return $this->morphOne('Gsantoscomp\VetDb\Models\Usuario', 'entidade', 'entidade_tipo');
+        return $this->morphOne('Gsantoscomp\SharedVetDb\Models\Usuario', 'entidade', 'entidade_tipo');
     }
 }
