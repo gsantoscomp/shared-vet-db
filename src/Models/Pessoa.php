@@ -14,6 +14,6 @@ class Pessoa extends Model
 
     public function usuario()
     {
-        return $this->morphOne('Gsantoscomp\SharedVetDb\Models\Usuario', 'entidade', 'entidade_tipo');
+        return $this->morphMany('Gsantoscomp\SharedVetDb\Models\Usuario', 'entidade', 'entidade_tipo');
     }
 }

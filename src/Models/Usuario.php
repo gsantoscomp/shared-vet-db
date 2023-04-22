@@ -39,7 +39,7 @@ class Usuario extends Authenticatable implements JWTSubject
 
     public function entidade()
     {
-        return $this->morphTo();
+        return $this->morphTo(__FUNCTION__, 'entidade_tipo', 'entidade_id');
     }
 
     public function tipoUsuario()
