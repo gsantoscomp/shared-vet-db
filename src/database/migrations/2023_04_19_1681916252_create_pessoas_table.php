@@ -21,6 +21,7 @@ class CreatePessoasTable extends Migration
             $table->string('numero',10)->nullable();
             $table->string('complemento',255)->nullable();
             $table->timestamps();
+            
         });
     }
 
