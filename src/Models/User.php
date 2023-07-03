@@ -8,25 +8,24 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class Usuario extends Authenticatable implements JWTSubject
+class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'usuarios';
+    protected $table = 'users';
 
     protected $fillable = [
-        'email', 'senha', 'entidade_tipo', 'entidade_id', 'tipo_usuario_id'
+        'email',
+        'password',
+        'name',
+        'user_type_id'
     ];
 
     protected $hidden = [
-        'senha',
+        'password',
         'remember_token',
     ];
 
-    public function getAuthPassword()
-    {
-        return $this->senha;
-    }
     public function getJWTIdentifier()
     {
         return $this->getKey();
@@ -35,15 +34,5 @@ class Usuario extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
-    }
-
-    public function entidade()
-    {
-        return $this->morphTo(__FUNCTION__, 'entidade_tipo', 'entidade_id');
-    }
-
-    public function tipoUsuario()
-    {
-        return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\TipoUsuario', 'tipo_usuario_id', 'id');
     }
 }

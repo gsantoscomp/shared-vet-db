@@ -16,6 +16,9 @@ class CreateAppointmentsTable extends Migration
             $table->dateTime('final_date')->nullable();
             $table->text('description');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('animal_id')->references('id')->on('animals');
         });
     }
 

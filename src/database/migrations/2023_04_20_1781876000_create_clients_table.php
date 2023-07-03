@@ -15,6 +15,7 @@ class CreateClientsTable extends Migration
             $table->string('phone_number', 100);
             $table->enum('document_type', ['cpf', 'cnpj']);
             $table->string('document', 100);
+            $table->string('address', 255);
             $table->timestamps();
         });
     }
