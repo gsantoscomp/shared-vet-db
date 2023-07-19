@@ -16,4 +16,9 @@ class Permission extends Model
         'document',
         'address',
     ];
+
+    public function userType()
+    {
+        return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\UserType','user_type_id');
+    }
 }

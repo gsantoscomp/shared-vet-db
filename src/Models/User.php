@@ -35,4 +35,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
+    public function userType()
+    {
+        return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\UserType','user_type_id');
+    }
 }
