@@ -4,15 +4,17 @@ namespace Gsantoscomp\SharedVetDb\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Permission extends Model
+class Client extends Model
 {
-    protected $table = 'permissions';
+    protected $table = 'clients';
 
     protected $fillable = [
-        'module',
-        'page',
         'name',
-        'user_type_id'
+        'email',
+        'phone_number',
+        'document_type',
+        'document',
+        'address',
     ];
 
     public function userType()
