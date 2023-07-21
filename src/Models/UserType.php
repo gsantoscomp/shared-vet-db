@@ -15,11 +15,11 @@ class UserType extends Model
 
     public function users()
     {
-        return $this->hasMany('Gsantoscomp\SharedVetDb\Models\User', 'user_type_id');
+        return $this->hasMany('Gsantoscomp\SharedVetDb\Models\User');
     }
 
     public function permissions()
     {
-        return $this->hasMany('Gsantoscomp\SharedVetDb\Models\Permission','permission_id');
+        return $this->hasMany('Gsantoscomp\SharedVetDb\Models\Permission');
     }
 }
