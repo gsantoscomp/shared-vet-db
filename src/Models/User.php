@@ -40,4 +40,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\UserType','user_type_id');
     }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 }
