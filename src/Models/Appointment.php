@@ -9,16 +9,16 @@ class Appointment extends Model
     protected $table = 'appointments';
 
     protected $fillable = [
-        'user_id',
+        'client_id',
         'animal_id',
         'initial_date',
         'final_date',
         'description'
     ];
 
-    public function user()
+    public function client()
     {
-        return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\User', 'user_id');
+        return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\Client', 'client_id');
     }
 
     public function animal()

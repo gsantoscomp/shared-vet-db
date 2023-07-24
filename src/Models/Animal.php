@@ -18,4 +18,9 @@ class Animal extends Model
     {
         return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\Client', 'client_id');
     }
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 }
