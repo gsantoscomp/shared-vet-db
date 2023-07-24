@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Permission extends Model
 {
-    protected $table = 'permission';
+    protected $table = 'permissions';
 
     protected $fillable = [
+        'module',
+        'page',
         'name',
-        'email',
-        'phone_number',
-        'document_type',
-        'document',
-        'address',
+        'user_type_id'
     ];
 
     public function userType()

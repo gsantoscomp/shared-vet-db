@@ -22,6 +22,7 @@ class Client extends Model
         return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\UserType','user_type_id');
     }
 
+
     public function appointment()
     {
         return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\Appointment','appointment_id');
