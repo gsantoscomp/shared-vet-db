@@ -13,7 +13,10 @@ class CreateProceduresTable extends Migration
             $table->string('name', 255);
             $table->unsignedBigInteger('price');
             $table->text('description')->nullable();
+            $table->unsignedBigInteger('company_id');
             $table->timestamps();
+
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 

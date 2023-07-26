@@ -14,10 +14,12 @@ class CreateUsersTable extends Migration
             $table->string('password', 100);
             $table->string('name', 255);
             $table->unsignedBigInteger('user_type_id');
+            $table->unsignedBigInteger('company_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
             $table->foreign('user_type_id')->references('id')->on('users_types');
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 

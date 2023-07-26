@@ -10,8 +10,8 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->string('module', 50);
-            $table->string('page', 50);
+            $table->string('module', 50)->nullable();
+            $table->string('page', 50)->nullable();
             $table->string('name', 255);
             $table->unsignedBigInteger('user_type_id');
             $table->timestamps();

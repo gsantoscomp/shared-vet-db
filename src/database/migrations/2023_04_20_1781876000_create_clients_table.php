@@ -16,7 +16,11 @@ class CreateClientsTable extends Migration
             $table->enum('document_type', ['cpf', 'cnpj']);
             $table->string('document', 100);
             $table->string('address', 255);
+            $table->unsignedBigInteger('company_id');
             $table->timestamps();
+
+
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 

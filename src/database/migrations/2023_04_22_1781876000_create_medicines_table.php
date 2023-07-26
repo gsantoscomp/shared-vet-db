@@ -15,7 +15,10 @@ class CreateMedicinesTable extends Migration
             $table->unsignedBigInteger('purchase_price');
             $table->unsignedBigInteger('sale_price');
             $table->text('description');
+            $table->unsignedBigInteger('company_id');
             $table->timestamps();
+
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 

@@ -12,6 +12,8 @@ class CreateAppointmentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('client_id');
             $table->unsignedBigInteger('animal_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('company_id');
             $table->dateTime('initial_date');
             $table->dateTime('final_date')->nullable();
             $table->text('description');
@@ -19,6 +21,8 @@ class CreateAppointmentsTable extends Migration
 
             $table->foreign('client_id')->references('id')->on('clients');
             $table->foreign('animal_id')->references('id')->on('animals');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 
