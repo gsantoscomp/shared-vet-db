@@ -18,7 +18,8 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'password',
         'name',
-        'user_type_id'
+        'user_type_id',
+        'company_id'
     ];
 
     protected $hidden = [
@@ -39,6 +40,11 @@ class User extends Authenticatable implements JWTSubject
     public function userType()
     {
         return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\UserType','user_type_id');
+    }
+
+    public function company()
+    {
+        return $this->belongsTo('Gsantoscomp\SharedVetDb\Models\Company','company_id');
     }
 
     public function setPasswordAttribute($value)
