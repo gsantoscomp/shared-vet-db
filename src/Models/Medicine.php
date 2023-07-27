@@ -13,6 +13,7 @@ class Medicine extends Model
         'quantity',
         'purchase_price',
         'sale_price',
-        'description'
+        'description',
+        'company_id'
     ];
 }
